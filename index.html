@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ViRe-Agent: Multi-Modal Composed Retrieval with Dynamic Scene Segmentation for Cross-Duration Video">
+  <meta name="keywords" content="Video Retrieval, Agent, Multi-Modal, Scene Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViRe-Agent: Multi-Modal Video Retrieval Agent</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ViRe-Agent: Multi-Modal Composed Retrieval with Dynamic Scene Segmentation for Cross-Duration Video</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Anonymous ICME submission</a><sup>1</sup>,</span>
+            
+          </div>
+<!--
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University A,</span>
+            <span class="author-block"><sup>2</sup>University B</span>
+          </div>
+-->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/cdd17/The-short-wave-infrared-recognition-assistance-vehicle" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="ViRe-Agent Interface" style="width:100%; height:auto;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">ViRe-Agent</span> supports interactive search, formulation of multimodal search as a policy-driven decision process, and full-process database construction.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing multimodal video retrieval systems are limited by weak intent understanding and rigid similarity-based matching, especially when handling composed queries that integrate heterogeneous inputs.
+          </p>
+          <p>
+            To fill this gap, we propose <strong>ViRe-Agent</strong>, a retrieval agent that formulates multimodal search as a policy-driven decision process. The core contribution lies in a <strong>Light MDP routing mechanism</strong>, which selects an optimal retrieval policy (semantic, similarity, composed, or fingerprint-based) conditioned on both query intent and segment-level video semantics.
+          </p>
+          <p>
+            We further integrate scene segmentation and multi-modal fingerprinting to support cross-duration queries and provenance tracing. Extensive experiments demonstrate consistent improvements over recent baselines including CoVR, TransVCL, and CLIP4Clip, with gains up to 4.6% R@1 on real-world data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Methodology</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">1. System Architecture</h3>
+        <div class="content has-text-justified">
+          <p>
+            ViRe-Agent operates under two distinct modes: <strong>Feature Extraction Mode</strong> and <strong>Retrieval Mode</strong>.
+            The system integrates multimodal input parsing, LLM-based intent understanding, and dynamic retrieval strategy selection.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/frame.png" alt="ViRe-Agent Framework" style="width:100%;">
+          <p class="is-size-6">Figure 1: The overall architecture of the multi-modal video retrieval agent system.</p>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">2. Agent Workflow & Routing</h3>
+        <div class="content has-text-justified">
+          <p>
+            The core of our agent is the <strong>Light MDP routing mechanism</strong>. 
+            It selects the optimal retrieval policy (Semantic, Similarity, Composed, or Fingerprint) conditioned on query intent and current states.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/workflow.png" alt="Agent Working Flow" style="width:100%;">
+          <p class="is-size-6">Figure 2: The decision-making workflow of the ViRe-Agent.</p>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">3. Dynamic Scene Segmentation</h3>
+        <div class="content has-text-justified">
+          <p>
+            We perform semantic scene segmentation on the original long video based on TransNetV2. 
+            Shot transition detection and clustering semantic coherence shots into segments allows for fine-grained retrieval.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/segmentation.png" alt="Scene Segmentation" style="width:80%;">
+          <p class="is-size-6">Figure 3: Semantic scene segmentation pipeline.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">R3V Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We constructed a real-world video retrieval dataset (R3V) comprising 1,000 clips sourced from diverse content including films, TV dramas, documentaries, and variety shows.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+           <img src="./static/images/dataset.png" alt="Dataset Examples" style="width:80%;">
+           <p>Display of part of real-word private dataset with multilingual annotations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{vireagent2026,
+  author    = {Anonymous Authors},
+  title     = {ViRe-Agent: Multi-Modal Composed Retrieval with Dynamic Scene Segmentation for Cross-Duration Video},
+  booktitle = {IEEE International Conference on Multimedia and Expo (ICME)},
+  year      = {2026},
+}</code></pre>
+  </div>
+</section>
+-->
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        This website is licensed under a <a rel="license"
+                                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
