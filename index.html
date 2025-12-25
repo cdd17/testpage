@@ -74,7 +74,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" class="external-link button is-normal is-rounded is-dark js-modal-link" data-message="Under Anonymous Reviewing">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -82,7 +82,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" class="external-link button is-normal is-rounded is-dark js-modal-link" data-message="Under Anonymous Reviewing">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -98,7 +98,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/cdd17/The-short-wave-infrared-recognition-assistance-vehicle" class="external-link button is-normal is-rounded is-dark">
+                <a href="#" class="external-link button is-normal is-rounded is-dark js-modal-link" data-message="Coming soon">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -122,16 +122,19 @@
           <figure class="image">
             <img src="./static/images/teaser1.gif" alt="ViRe-Agent demo 1" style="width:100%; height:auto;">
           </figure>
+          <p class="has-text-centered is-size-6 mt-2">lmage + Text or Video + Text Query</p>
         </div>
         <div class="column">
           <figure class="image">
             <img src="./static/images/teaser2.gif" alt="ViRe-Agent demo 2" style="width:100%; height:auto;">
           </figure>
+          <p class="has-text-centered is-size-6 mt-2">lmage or Video Query</p>
         </div>
         <div class="column">
           <figure class="image">
             <img src="./static/images/teaser3.gif" alt="ViRe-Agent demo 3" style="width:100%; height:auto;">
           </figure>
+          <p class="has-text-centered is-size-6 mt-2">Text Query</p>
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
@@ -157,21 +160,6 @@
           <p>
             We further integrate scene segmentation and multi-modal fingerprinting to support cross-duration queries and provenance tracing. Extensive experiments demonstrate consistent improvements over recent baselines including CoVR, TransVCL, and CLIP4Clip, with gains up to 4.6% R@1 on real-world data.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -289,6 +277,22 @@
     </div>
   </div>
 </footer>
+
+<div id="info-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Notice</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <p id="modal-message">Placeholder</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-dark" id="modal-close-btn">OK</button>
+    </footer>
+  </div>
+</div>
 
 </body>
 </html>

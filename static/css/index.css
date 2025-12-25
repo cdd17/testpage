@@ -155,3 +155,13 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+#info-modal .modal-card {
+  max-width: 420px;
+  width: 90%;
+  border-radius: 10px;
+}
+#info-modal .modal-card-head,
+#info-modal .modal-card-foot {
+  border: none;
+}

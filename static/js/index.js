@@ -75,4 +75,19 @@ $(document).ready(function() {
 
     bulmaSlider.attach();
 
+    const modal = $('#info-modal');
+    const modalMsg = $('#modal-message');
+    const closeModal = () => modal.removeClass('is-active');
+    const showModal = (msg) => {
+      modalMsg.text(msg);
+      modal.addClass('is-active');
+    };
+
+    $('.js-modal-link').on('click', function (e) {
+      e.preventDefault();
+      showModal($(this).data('message'));
+    });
+
+    $('#modal-close-btn, #info-modal .delete, #info-modal .modal-background').on('click', closeModal);
+
 })
